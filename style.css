@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+body{
+    background-color: var(--light-pink);
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.faq{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.faq h1{
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: var(--dark-purple);
+}
+
+.card{
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin: 1rem;
+    max-width: 40rem;
+}    
+
+.accordion {
+    max-width: 70rem;
+
+}
+
+.accordion-item {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title h2{
+    color: var(--dark-purple);
+    font-weight: 600;
+}
+.accordion-header {
+    background-color: #B12BF0;
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    font-size: 18px; /* Reduzido para caber no círculo */
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: var(--white);
+    border-radius: 50%; /* Mantém o formato circular */
+    width: 2.5rem; /* Largura ligeiramente maior */
+    height: 2.5rem; /* Altura ligeiramente maior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remova o padding para manter o círculo */
+    border: none;
+}
+
+.accordion-header:hover {
+    background-color: var(--dark-purple);
+}
+
+.accordion-content {
+    display: none; /* Initially hidden */
+    padding: 15px;
+    color: var(--grayish-purple);
+    font-weight: 400;
+    width: 26rem;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+@media (max-width: 660px){
+    .accordion-content {
+        display: none; /* Initially hidden */
+        padding: 15px;
+        color: var(--grayish-purple);
+        font-weight: 400;
+        width: 16rem;
+    }
+
+    .card{
+        max-width: 33rem;
+    } 
+    
+    .accordion-header {
+        width: 1.3rem; /* Tamanho menor para telas pequenas */
+        height: 1.3rem; /* Tamanho menor para telas pequenas */
+        padding: 0.3rem;
+        font-size: 14px; /* Ajuste de fonte proporcional */
+        margin: 0 0.2rem; /* Reduzindo a margem lateral */
+    }
+}
